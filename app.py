@@ -125,7 +125,7 @@ with st.sidebar:
     run_judge = st.checkbox("Run model-as-judge scoring", value=True)
     show_baseline = st.checkbox("Show keyword baseline comparison", value=True)
     st.divider()
-    st.caption("**Model:** gemini-1.5-flash\n\n**Course concepts:**\n- Structured outputs (Week 2-3)\n- Model-as-judge evaluation (Week 6)")
+    st.caption("**Model:** gemini-2.5-flash\n\n**Course concepts:**\n- Structured outputs (Week 2-3)\n- Model-as-judge evaluation (Week 6)")
 
 # ── Sample data ───────────────────────────────────────────────────────────────
 SAMPLE_JD = """Data Analyst – Business Intelligence
@@ -201,7 +201,7 @@ if analyze_btn:
         st.stop()
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
 
     kw_score, kw_hits, kw_misses = keyword_baseline(jd_input, resume_input)
 
